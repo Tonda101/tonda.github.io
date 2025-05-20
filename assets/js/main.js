@@ -1,3 +1,38 @@
+// Main
+var	$main = $('#main');
+
+$main.scrollex({
+    mode: 'bottom',
+    top: '25vh',
+    bottom: '-50vh',
+    enter: function() {
+        $intro.addClass('hidden');
+    },
+    leave: function() {
+        // When leaving the main section (scrolling up towards intro)
+        // We want to re-trigger the intro animation.
+
+        // 1. Ensure the element is in the starting state (opacity 0, translateY 2rem)
+        //    The CSS rule #intro.hidden already sets this, but let's explicitly set it
+        //    using inline styles for a moment to be sure before removing the class.
+        $intro.css({
+            'opacity': 0,
+            'transform': 'translateY(2rem)'
+        });
+
+        // 2. Force a reflow. This makes the browser acknowledge the style change.
+        //    Accessing offsetHeight is a common way to do this.
+        $intro[0].offsetHeight;
+
+        // 3. Remove the 'hidden' class. This will allow the CSS transition
+        //    on #intro to animate it back to its final state (opacity 1, translateY 0).
+        //    We wrap this in a tiny setTimeout to ensure the reflow happens first.
+        window.setTimeout(function() {
+             $intro.removeClass('hidden');
+        }, 10); // A small delay, e.g., 10ms
+
+    }
+});
 /*
 	Massively by HTML5 UP
 	html5up.net | @ajlkn
