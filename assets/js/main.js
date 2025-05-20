@@ -239,7 +239,7 @@
 						top: '20vh',
 						bottom: '-15vh',
 						enter: function() {
-							$intro.removeClass('hidden');
+							$intro.addClass('hidden');
 						},
 						leave: function() {
 							$intro.removeClass('hidden');
