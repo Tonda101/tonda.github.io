@@ -3282,6 +3282,10 @@ input, select, textarea {
 		}
 
 /* Intro */
+    $intro.css({
+            'opacity': 0,
+            'transform': 'translateY(2rem)'
+        });
 
 	#intro.hidden {
 		color: #ffffff;

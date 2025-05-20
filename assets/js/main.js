@@ -1,27 +1,3 @@
-// Main
-var	$main = $('#main');
-
-$main.scrollex({
-    mode: 'bottom',
-    top: '25vh',
-    bottom: '-50vh',
-    enter: function() {
-        $intro.addClass('hidden');
-    },
-    leave: function() {
-
-        $intro.css({
-            'opacity': 0,
-            'transform': 'translateY(2rem)'
-        });
-        $intro[0].offsetHeight;
-        window.setTimeout(function() {
-             $intro.removeClass('hidden');
-        }, 10); 
-
-    }
-});
-
 
 (function($) {
 
@@ -244,11 +220,11 @@ $main.scrollex({
 						top: '25vh',
 						bottom: '-50vh',
 						enter: function() {
-							$intro.addClass('hidden');
+						$intro.addClass('hidden');
 						},
-						leave: function() {
-							$intro.removeClass('hidden');
+						leave: function() 
 						}
+						
 					});
 
 				});
