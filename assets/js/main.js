@@ -216,8 +216,8 @@
 					$main.unscrollex();
 
 					$main.scrollex({
-						mode: 'top',
-						top: '15vh',
+						mode: 'bottom',
+						top: '20vh',
 						bottom: '-60vh',
 						enter: function() {
 							$intro.addClass('hidden');
