@@ -192,9 +192,9 @@
 						.css('transition', 'none');
 
 	// Intro.
-				var $intro = $('#intro');
+		var $intro = $('#intro');
 
-				if ($intro.length > 0) {
+		if ($intro.length > 0) {
 
 			// Hack: Fix flex min-height on IE.
 				if (browser.name == 'ie') {
@@ -220,11 +220,11 @@
 						top: '25vh',
 						bottom: '-50vh',
 						enter: function() {
-						$intro.addClass('hidden');
+							$intro.addClass('hidden');
 						},
-						leave: function() 
+						leave: function() {
+							$intro.removeClass('hidden');
 						}
-						
 					});
 
 				});
